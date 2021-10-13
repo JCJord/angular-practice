@@ -1,0 +1,43 @@
+<hr />
+<H4>Server id : {{ id }}</H4>
+<input type="text" [(ngModel)]="serverName" />
+<br />
+<br />
+<button
+  type="button"
+  [disabled]="serverName == ''"
+  (click)="onCreateServer()"
+  class="btn btn-primary"
+>
+  Primary
+</button>
+
+<h6>{{ status }}</h6>
+
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: status === 'online' }"
+>
+  {{ serverName }}
+</p>
+
+<p *ngIf="serverName === ''" else noServer>ESCREVA ALGO LIXO</p>
+
+<ng-template #noServer>
+  <p>Server created with</p>
+</ng-template>
+
+<P>{{ getServerStatus() }}</P>
+
+<ul *ngFor="let server of servers">
+  <li>{{ server }}</li>
+</ul>
+<button type="button" (click)="displayDetails()" class="btn btn-primary">
+  Display Details
+</button>
+
+<p *ngIf="paragraphToggle">Secret password = tuna</p>
+
+<p *ngFor="let logs of log" [ngClass]="{ log: logNum > 5 }">
+  {{ logs }}
+</p>
