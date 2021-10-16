@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC,IAAI,CAAC;EACrB,YAAY,EAAE,GAAG;CAClB",
+    "sources": [
+        "shopping-edit.component.scss"
+    ],
+    "names": [],
+    "file": "shopping-edit.component.css"
+}

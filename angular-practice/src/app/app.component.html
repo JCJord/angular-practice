@@ -1,5 +1,11 @@
+<app-header (feature)="featureSelector($event)"> </app-header>
 <div class="container">
-  <h1>APP component</h1>
-
-  <app-server></app-server>
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="featureSelected === 'recipe'"></app-recipes>
+      <app-shopping-list
+        *ngIf="featureSelected === 'shopping'"
+      ></app-shopping-list>
+    </div>
+  </div>
 </div>

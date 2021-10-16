@@ -1,1 +1,52 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container">
+    <a class="navbar-brand" href="#">Angular</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="recipe('recipe')">Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="shop('shopping')"
+            >Shopping List</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Save Data</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">Fetch Data</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="burger-menu" (click)="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</nav>
+<div id="mySidenav" class="sidenav" [ngClass]="{ openMenu: toggler }">
+  <a href="javascript:void(0)" class="closebtn" (click)="toggleMenu()"
+    >&times;</a
+  >
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>

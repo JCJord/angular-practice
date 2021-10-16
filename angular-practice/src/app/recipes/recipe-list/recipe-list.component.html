@@ -1,0 +1,16 @@
+<div class="row mt-4 mb-3">
+  <div class="col-md-12">
+    <div class="btn btn-success">New Recipe</div>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-md-12">
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes"
+      [recipeData]="recipeEl"
+      (recipeSelected)="onRecipeSelected(recipeEl)"
+    ></app-recipe-item>
+    <app-shopping-edit></app-shopping-edit>
+  </div>
+</div>
