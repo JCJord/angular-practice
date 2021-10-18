@@ -10,4 +10,5 @@ export class AppComponent {
   oddNumbers = [1, 3, 5]
   eveNumbers = [2, 4]
   onlyOdd = false
+  value = 10
 }
