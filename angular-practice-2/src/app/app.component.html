@@ -1,0 +1,47 @@
+<div class="container">
+  <app-cockpit
+    (serverCreated)="onAddedServer($event)"
+    (bluePrintCreated)="onAddedBlueprint($event)"
+  ></app-cockpit>
+  <hr />
+  <div class="row">
+    <app-server-element
+      *ngFor="let serverElement of serverElements"
+      [srvElement]="serverElement"
+    >
+      <p>
+        <strong *ngIf="serverElement.type === 'server'" style="color: red">{{
+          serverElement.content
+        }}</strong>
+        <em *ngIf="serverElement.type === 'blueprint'">{{
+          serverElement.content
+        }}</em>
+      </p>
+    </app-server-element>
+
+    <app-duklen
+      *ngFor="let serverElement of serverElements"
+      (products)="productReceiver($event)"
+    >
+    </app-duklen>
+
+    <div class="panel panel-default" *ngFor="let products of receivingArr">
+      <div class="panel-body">
+        <h4>Produto</h4>
+        {{ products.name }}
+      </div>
+      <div class="panel-body">
+        <h4>Preço</h4>
+        {{ products.price }}
+      </div>
+      <div class="panel-body">
+        <h4>Quantidade</h4>
+        {{ products.amount }}
+      </div>
+      <div class="panel-body">
+        <h4>Loja</h4>
+        {{ products.store }}
+      </div>
+    </div>
+  </div>
+</div>
