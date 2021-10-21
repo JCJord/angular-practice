@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Product Name</label>
+      <input type="text" class="form-control" #productName />
+      <label>Product Price</label>
+      <input type="number" class="form-control" #productPrice />
+      <label>Product Amount</label>
+      <input type="number" class="form-control" #productAmount />
+    </div>
+
+    <button
+      class="btn btn-primary"
+      (click)="
+        onCreateProduct(
+          productName.value,
+          productPrice.value,
+          productAmount.value
+        )
+      "
+    >
+      Add Product
+    </button>
+  </div>
+</div>
