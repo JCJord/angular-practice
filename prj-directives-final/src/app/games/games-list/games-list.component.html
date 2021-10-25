@@ -1,0 +1,14 @@
+<div class="col-md-6">
+  <ul class="list-group" *ngFor="let game of games">
+    <li class="list-group-item">
+      <h4>Game:</h4>
+      {{ game.name }} --
+      <h4>Genre</h4>
+      {{ game.genre }}
+      <h4>Year</h4>
+      {{ game.year }} --
+      <h4>Minimun age</h4>
+      {{ game.age }}
+    </li>
+  </ul>
+</div>

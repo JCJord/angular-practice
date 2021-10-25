@@ -1,0 +1,22 @@
+<div class="w-75 col-sm-5">
+  <div class="col-sm form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" #nameInput required />
+  </div>
+  <div class="col-sm form-group">
+    <label for="amount">Role</label>
+    <input type="text" id="amount" class="form-control" #roleInput required />
+  </div>
+  <div class="col-sm form-group">
+    <label for="amount">wage</label>
+    <input type="number" id="amount" class="form-control" #wageInput required />
+  </div>
+  <div class="col-sm form-group">
+    <button
+      class="btn btn-success"
+      (click)="addEmployee(nameInput.value, roleInput.value, wageInput.value)"
+    >
+      New Recipe
+    </button>
+  </div>
+</div>

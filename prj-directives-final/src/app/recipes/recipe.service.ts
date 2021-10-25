@@ -22,7 +22,7 @@ export class RecipeService {
     ),
     new Recipe(
       'Churrasco',
-      'This is simply a test',
+      'This is simple a test',
       'https://super.abril.com.br/wp-content/uploads/2018/10/churrasco.png?w=1024',
       [
         new Ingredient('Carne', 8),
@@ -33,7 +33,7 @@ export class RecipeService {
     ),
     new Recipe(
       'Omelete',
-      'This is simply a test',
+      'This is simple a test',
       'https://t1.rg.ltmcdn.com/pt/images/4/2/6/img_omelete_de_micro_ondas_simples_5624_600.jpg',
       [new Ingredient('Ovos', 5), new Ingredient('Salada', 2)]
     )

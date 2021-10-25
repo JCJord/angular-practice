@@ -12,6 +12,15 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component'
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component'
 import { DropdownDirective } from './shared/dropdown.directive'
 import { ShoppingListService } from './shopping-list/shopping-list.service'
+import { EmployeeComponent } from './employee/employee.component'
+import { NewEmployeeComponent } from './employee/new-employee/new-employee.component'
+import { EmployeeListComponent } from './employee/employee-list/employee-list.component'
+import { EmployeeService } from './employee/employee.service'
+
+import { GamesComponent } from './games/games.component'
+import { GamesListComponent } from './games/games-list/games-list.component'
+import { NewGameComponent } from './games/new-game/new-game.component'
+import { GamesService } from './games/games.service'
 
 @NgModule({
   declarations: [
@@ -23,10 +32,17 @@ import { ShoppingListService } from './shopping-list/shopping-list.service'
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    EmployeeComponent,
+    NewEmployeeComponent,
+    EmployeeListComponent,
+
+    GamesComponent,
+    GamesListComponent,
+    NewGameComponent
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, EmployeeService, GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
