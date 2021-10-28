@@ -21,7 +21,8 @@ import { GamesComponent } from './games/games.component'
 import { GamesListComponent } from './games/games-list/games-list.component'
 import { NewGameComponent } from './games/new-game/new-game.component'
 import { GamesService } from './games/games.service'
-import { AppRoutingModule } from './app.routing.module'
+import { AppRoutingModule } from './app.routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AppRoutingModule } from './app.routing.module'
 
     GamesComponent,
     GamesListComponent,
-    NewGameComponent
+    NewGameComponent,
+    RecipeStartComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [ShoppingListService, EmployeeService, GamesService],
