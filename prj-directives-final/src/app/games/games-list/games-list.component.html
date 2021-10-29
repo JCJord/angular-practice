@@ -1,6 +1,10 @@
 <div class="col-md-6">
-  <ul class="list-group" *ngFor="let game of games">
-    <li class="list-group-item">
+  <ul class="list-group" *ngFor="let game of games; let i = index">
+    <a
+      [routerLink]="['/games/' + i]"
+      routerLinkActive="router-link-active"
+      class="list-group-item clearfix"
+    >
       <h4>Game:</h4>
       {{ game.name }} --
       <h4>Genre</h4>
@@ -9,6 +13,6 @@
       {{ game.year }} --
       <h4>Minimun age</h4>
       {{ game.age }}
-    </li>
+    </a>
   </ul>
 </div>

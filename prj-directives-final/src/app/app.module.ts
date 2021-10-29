@@ -22,7 +22,8 @@ import { GamesListComponent } from './games/games-list/games-list.component'
 import { NewGameComponent } from './games/new-game/new-game.component'
 import { GamesService } from './games/games.service'
 import { AppRoutingModule } from './app.routing.module';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component'
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { GameDetailComponent } from './games/game-detail/game-detail.component'
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     GamesComponent,
     GamesListComponent,
     NewGameComponent,
-    RecipeStartComponent
+    RecipeStartComponent,
+    GameDetailComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [ShoppingListService, EmployeeService, GamesService],
